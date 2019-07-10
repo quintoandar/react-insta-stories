@@ -48,12 +48,38 @@ p{
 .storyImg {
   object-fit: cover;
   margin: unset;
+  position: absolute;
+  height: 100%;
+
+  /* W3C Standard */
   animation-name: horizontal-scroll;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  position: absolute;
-  height: 100%;
+
+  /* Safari & Chrome */
+  -webkit-animation-name: horizontal-scroll;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+  /* Firefox */
+  -moz-animation-name: horizontal-scroll;
+  -moz-animation-duration: 5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+
+  /* Internet Explorer */
+  -ms-animation-name: horizontal-scroll;
+  -ms-animation-duration: 5s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+
+  /* Opera */
+  -o-animation-name: horizontal-scroll;
+  -o-animation-duration: 5s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
 }
 
 .spinner {
