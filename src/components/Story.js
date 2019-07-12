@@ -16,11 +16,6 @@ class Story extends React.PureComponent {
 
   componentDidUpdate(prevProps) {
     if (this.props.story !== prevProps.story) {
-      this.pauseId && clearTimeout(this.pauseId)
-      this.pauseId = setTimeout(() => {
-        this.setState({ loaded: false })
-      }, 300)
-
       this.props.action('pause', true)
 
       this.vid && this.vid.addEventListener('waiting', () => {
@@ -47,7 +42,6 @@ class Story extends React.PureComponent {
 
   imageLoaded = () => {
     try {
-      if (this.pauseId) clearTimeout(this.pauseId)
       this.setState({ loaded: true })
       this.props.action('play', true)
     } catch (e) {
