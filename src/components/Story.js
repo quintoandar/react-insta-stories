@@ -42,8 +42,9 @@ class Story extends React.PureComponent {
 
   imageLoaded = () => {
     try {
-      this.setState({ loaded: true })
-      this.props.action('play', true)
+      this.setState({ loaded: true }, () => {
+        this.props.action('play', true)
+      })
     } catch (e) {
       console.log(e)
     }
@@ -65,6 +66,22 @@ class Story extends React.PureComponent {
 
   storeVideoReference = r => {
     this.vid = r
+  }
+
+  getLoaderStyle = () => {
+    return {
+      width: this.props.width,
+      height: this.props.height,
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      background: 'rgba(0, 0, 0, 0.9)',
+      zIndex: 9,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      color: '#ccc'
+    }
   }
 
   getStoryContent() {
@@ -109,7 +126,13 @@ class Story extends React.PureComponent {
         {isHeader && <div style={{ position: 'absolute', left: 12, top: 20, zIndex: 19 }}>
           {this.props.header ? () => this.props.header(this.props.story.header) : <Header heading={this.props.story.header.heading} subheading={this.props.story.header.subheading} profileImage={this.props.story.header.profileImage} />}
         </div>}
-        {!this.state.loaded && <div style={{ width: this.props.width, height: this.props.height, position: 'absolute', left: 0, top: 0, background: 'rgba(0, 0, 0, 0.9)', zIndex: 9, display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#ccc' }}>{this.props.loader || <div className={globalStyle.spinner} />}</div>}
+
+        {!this.state.loaded &&
+          <div style={this.getLoaderStyle()}>
+            {this.props.loader || <div className={globalStyle.spinner} />}
+          </div>
+        }
+
         {this.props.story.seeMore &&
           <div style={{ position: 'absolute', margin: 'auto', bottom: 0, zIndex: 9999, width: '100%' }}>
             <SeeMore action={this.props.action} toggleMore={this.toggleMore} showContent={this.state.showMore} seeMoreContent={this.props.story.seeMore} />
