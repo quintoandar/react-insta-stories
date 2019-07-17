@@ -4,7 +4,7 @@ import style from './../styles.css'
 import ProgressWrapper from './ProgressWrapper'
 import { COMING, ACTIVE, PASSED } from './constants'
 
-export default class Progress extends React.PureComponent {
+class Progress extends React.PureComponent {
   componentDidMount() {
     if (this.inner) {
       this.inner.addEventListener('webkitAnimationEnd', this.next, false)
@@ -70,3 +70,5 @@ Progress.propTypes = {
     PropTypes.object
   ])
 }
+
+export default Progress
