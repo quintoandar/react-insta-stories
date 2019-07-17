@@ -1,6 +1,6 @@
 {
   "name": "quintoandar-react-insta-stories",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A React component for Instagram like stories",
   "author": "mohitk05",
   "license": "MIT",
@@ -19,11 +19,8 @@
     "npm": ">=5"
   },
   "scripts": {
-    "test": "cross-env CI=1 react-scripts test --env=jsdom",
-    "test:watch": "react-scripts test --env=jsdom",
     "build": "rollup -c",
     "start": "rollup -c -w",
-    "prepare": "npm run build",
     "predeploy": "cd ghpage && npm install && npm run build",
     "deploy": "gh-pages -d ghpage/build"
   },
