@@ -1,7 +1,6 @@
 import React from 'react'
 import Progress from './Progress'
 import PropTypes from 'prop-types'
-
 class ProgressArray extends React.PureComponent {
   render() {
     return (

@@ -1,8 +1,8 @@
 ![Main image](https://i.imgur.com/JQw5hwo.jpg?2)
-<h1 align="center">react-insta-stories</h1>
+<h1 align="center">quintoandar-react-insta-stories</h1>
 <p align="center">A React component for Instagram like stories</p>
 
-[![Backers on Open Collective](https://opencollective.com/react-insta-stories/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/react-insta-stories/sponsors/badge.svg)](#sponsors) [![NPM](https://img.shields.io/npm/v/react-insta-stories.svg)](https://www.npmjs.com/package/react-insta-stories) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Backers on Open Collective](https://opencollective.com/react-insta-stories/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/react-insta-stories/sponsors/badge.svg)](#sponsors) [![NPM](https://img.shields.io/npm/v/quintoandar-react-insta-stories.svg)](https://npmjs.com/package/quintoandar-react-insta-stories) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 #### Recent updates 🚀
 ⚡️ APIs added to trigger changes manually
@@ -13,7 +13,7 @@
 ## Install
 
 ```bash
-npm install --save react-insta-stories
+npm install --save quintoandar-react-insta-stories
 ```
 
 ## Demo
@@ -130,4 +130,4 @@ Support this project by becoming a sponsor. [Become a sponsor](https://opencolle
 
 ## License
 
-MIT © [mohitk05](https://github.com/mohitk05)
+MIT
