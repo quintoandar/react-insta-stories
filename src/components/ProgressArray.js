@@ -32,7 +32,7 @@ const defaultProgressStyle = {
   width: '98%',
   padding: '10px 5px',
   alignSelf: 'center',
-  zIndex: 99,
+  zIndex: 2,
   filter: 'drop-shadow(0 1px 8px #000)'
 }
 
